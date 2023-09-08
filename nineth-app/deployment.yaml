@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name:  nineth-app
-        image: paulopanini/nineth-app:20230908145502
+        image: ghcr.io/paulopanini/nineth-app:20230908145502
         imagePullPolicy: Always
         ports:
         - name: http
