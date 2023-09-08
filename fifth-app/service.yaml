@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fifth-app
+spec:
+  type: ClusterIP
+  selector:
+    app: fifth-app
+  ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: http
