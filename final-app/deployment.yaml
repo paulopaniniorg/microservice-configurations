@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: final-app
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: final-app
+  template:
+    metadata:
+      labels:
+        app: final-app
+    spec:
+      containers:
+      - name:  final-app
+        image: ghcr.io/paulopaniniorg/final-app:20230909180650
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+      imagePullSecrets:
+      - name: github-secret
