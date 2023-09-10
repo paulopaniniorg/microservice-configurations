@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name:  sixth-app
-        image: ghcr.io/paulopaniniorg/sixth-app:20230910144617
+        image: ghcr.io/paulopaniniorg/sixth-app:20230910144830
         imagePullPolicy: Always
         ports:
         - name: http
