@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: susu-app
+  annotations:
+    #kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  
+spec:
+  rules:
+    - http:
+        paths:
+        - pathType: Prefix
+          path: /susu-app(/|$)(.*)
+          backend:
+            service:
+              name: susu-app
+              port:
+                number: 8080
+

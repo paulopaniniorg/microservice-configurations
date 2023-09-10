@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: susu-app
+spec:
+  type: ClusterIP
+  selector:
+    app: susu-app
+  ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: http
