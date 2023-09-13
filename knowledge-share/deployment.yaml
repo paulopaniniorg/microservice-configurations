@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name:  knowledge-share
-        image: ghcr.io/paulopaniniorg/knowledge-share:20230913120830
+        image: ghcr.io/paulopaniniorg/knowledge-share:20230913121515
         imagePullPolicy: Always
         ports:
         - name: http
