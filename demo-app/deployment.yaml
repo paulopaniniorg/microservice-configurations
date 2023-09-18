@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name:  demo-app
-        image: ghcr.io/paulopaniniorg/demo-app:20230918064949
+        image: ghcr.io/paulopaniniorg/demo-app:20230918070536
         imagePullPolicy: Always
         ports:
         - name: http
