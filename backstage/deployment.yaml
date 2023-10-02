@@ -25,37 +25,15 @@ spec:
             requests:
               memory: 1Gi
               cpu: 500m
-          image: ghcr.io/paulopanini/backstage:latest
+          image: ghcr.io/paulopanini/backstage:20231002072634
           imagePullPolicy: Always
           ports:
             - name: http
               containerPort: 7007
           env:
-            - name: GITLAB_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: backstage-git-access-token
-                  key: token
-            - name: POSTGRES_USER
-              valueFrom:
-                secretKeyRef:
-                  name: backstage-db-pguser-backstage-db
-                  key: user
-            - name: POSTGRES_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: backstage-db-pguser-backstage-db
-                  key: password
-            - name: POSTGRES_HOST
-              valueFrom:
-                secretKeyRef:
-                  name: backstage-db-pguser-backstage-db
-                  key: host
-            - name: POSTGRES_PORT
-              valueFrom:
-                secretKeyRef:
-                  name: backstage-db-pguser-backstage-db
-                  key: port
+            - name: GITHUB_TOKEN
+              value: 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
+            
 # Uncomment if health checks are enabled in your app:
 # https://backstage.io/docs/plugins/observability#health-checks
 #          readinessProbe:
