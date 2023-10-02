@@ -30,6 +30,9 @@ spec:
           ports:
             - name: http
               containerPort: 7007
+          env:
+            - name: GITHUB_TOKEN
+              value: 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
           envFrom:
             - secretRef:
                 name: backstage-secrets
