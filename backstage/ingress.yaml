@@ -11,7 +11,7 @@ spec:
     - http:
         paths:
         - pathType: Prefix
-          path: /backstage
+          path: /
           backend:
             service:
               name: backstage
