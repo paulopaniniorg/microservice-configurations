@@ -8,13 +8,12 @@ metadata:
 
 spec:
   rules:
-    - host: backstage.k8s.local.net
-      http:
+    - http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: backstage
-                port:
-                  number: 80
+        - pathType: Prefix
+          path: /backstage
+          backend:
+            service:
+              name: backstage
+              port:
+                number: 80
