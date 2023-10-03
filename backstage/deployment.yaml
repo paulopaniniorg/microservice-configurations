@@ -25,14 +25,11 @@ spec:
             requests:
               memory: 1Gi
               cpu: 500m
-          image: ghcr.io/paulopanini/backstage:20231002111614
+          image: ghcr.io/paulopanini/backstage:20231002142143
           imagePullPolicy: Always
           ports:
             - name: http
               containerPort: 7007
-          env:
-            - name: GITHUB_TOKEN
-              value: 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
           envFrom:
             - secretRef:
                 name: backstage-secrets
