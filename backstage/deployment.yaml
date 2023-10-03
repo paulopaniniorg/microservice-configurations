@@ -25,7 +25,7 @@ spec:
             requests:
               memory: 1Gi
               cpu: 500m
-          image: ghcr.io/paulopanini/backstage:20231003074108
+          image: ghcr.io/paulopanini/backstage:20231003085340
           imagePullPolicy: Always
           ports:
             - name: http
