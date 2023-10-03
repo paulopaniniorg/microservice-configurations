@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feature-flag
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: feature-flag
+  template:
+    metadata:
+      labels:
+        app: feature-flag
+    spec:
+      containers:
+      - name:  feature-flag
+        image: ghcr.io/paulopaniniorg/feature-flag:20231003084245
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+      imagePullSecrets:
+      - name: github-secret
