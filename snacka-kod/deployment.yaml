@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name:  snacka-kod
-        image: ghcr.io/paulopaniniorg/snacka-kod:20231005083732
+        image: ghcr.io/paulopaniniorg/snacka-kod:20231012124354
         imagePullPolicy: Always
         ports:
         - name: http
